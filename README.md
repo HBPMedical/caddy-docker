@@ -71,7 +71,7 @@ Custom configuration can be inserted using `CADDY_ENTRY0_CUSTOM0` and each line 
 ## Getting Started
 
 ```sh
-$ docker run -d -p 2015:2015 hbpmip/caddy:0.10.10-0
+$ docker run -d -p 2015:2015 hbpmip/caddy:0.10.10-1
 ```
 
 Point your browser to `http://127.0.0.1:2015`.
@@ -87,7 +87,7 @@ $ docker run -d \
     -v $(pwd)/Caddyfile:/etc/Caddyfile \
     -v $HOME/.caddy:/root/.caddy \
     -p 80:80 -p 443:443 \
-    hbpmip/caddy:0.10.10-0
+    hbpmip/caddy:0.10.10-1
 ```
 
 
@@ -100,7 +100,7 @@ $ docker run -d \
     -e "CADDYPATH=/etc/caddycerts" \
     -v $HOME/.caddy:/etc/caddycerts \
     -p 80:80 -p 443:443 \
-    hbpmip/caddy:0.10.10-0
+    hbpmip/caddy:0.10.10-1
 ```
 
 Above, we utilize the `CADDYPATH` environment variable to define a different location inside the container for
