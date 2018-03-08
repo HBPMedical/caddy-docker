@@ -1,4 +1,5 @@
-TLS=$"{BASEVAR}_TLS_MODE"
+TLS_VAR="${BASEVAR}_TLS_MODE"
+TLS="${!TLS_VAR}"
 if [ -n "${TLS}" ] && [ "$TLS" != "on" ] ; then
   echo "  tls $TLS"
 fi
