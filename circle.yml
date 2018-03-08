@@ -1,0 +1,18 @@
+machine:
+  pre:
+    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci-docker.sh | bash -s -- 1.10.0
+    - curl -sSL https://raw.githubusercontent.com/harbur/captain/v1.1.0/install.sh | bash
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker version
+    - docker info
+    - PATH=$PATH:/$HOME/.captain/bin/ ./build.sh
+
+test: []
+
+notify:
+  webhooks:
+  - url: 'https://webhook.atomist.com/atomist/circle'

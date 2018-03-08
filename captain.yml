@@ -1,0 +1,9 @@
+target_image:
+  build: Dockerfile
+  image: hbpmip/caddy
+  pre:
+    - echo "Preparing Caddy"
+  post:
+    - echo "Finished building Caddy"
+  test:
+    - ./tests/test.sh
